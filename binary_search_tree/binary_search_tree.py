@@ -47,5 +47,15 @@ class BinarySearchTree:
 
     #pass
 
+  
   def for_each(self, cb):
-    pass
+    cb(self.value)
+    if self.right and self:
+      self.right.for_each(cb)
+    if self.left and self:
+      self.left.for_each(cb)
+    return cb(self.value)  
+      
+    #pass
+
+ 
